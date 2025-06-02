@@ -9,7 +9,7 @@ fn handle_client(mut stream: TcpStream){
     let request = String::from_utf8_lossy(&buffer[..]);
     println!("recieved request: {}",request);
     let response = "hello client".as_bytes();
-    stream.write(response).expect("failed to write response");
+    stream.write(response).expect("Failed to write response");
 }
 
 fn main(){
